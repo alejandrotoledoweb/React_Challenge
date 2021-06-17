@@ -101,7 +101,7 @@ const Calendar = ({
   return (
     <div className="">
       <div>
-        <div className="header justify-content-start align-items-center">
+        <div className="header justify-content-start align-items-center bg-primary bg-gradient rounded">
           <Link to="/" className="home-btn fw-bolder roboto">
             Back to home page
           </Link>
@@ -109,9 +109,11 @@ const Calendar = ({
             New Remainder
           </Link>
         </div>
+        <div className="middle-line"></div>
         <div className="header-1 text-center">
           <h1 className="title pro">Calendar of 2021</h1>
           <h2 className="subtitle pro">Month - July</h2>
+          <div className="middle-line"></div>
           <button
             className="btn btn-sm btn-secondary"
             value="all"
@@ -125,7 +127,7 @@ const Calendar = ({
           <thead>
             <tr>
               {daysOfWeek.map((day, idx) => (
-                <th className="day fs-5" key={idx}>
+                <th className="day fs-5 pro" key={idx}>
                   {day}
                 </th>
               ))}
@@ -229,40 +231,46 @@ const Calendar = ({
             </tr>
           </tbody>
         </table>
+        <div className="middle-line"></div>
       </div>
 
       <section className="container mt-5 pt-5">
-        <h3 className="mt-2 mb-4">List of Remainders</h3>
-        <p>Total of Remainder: {filteredRemainders.length}</p>
+        <h3 className="mt-2 mb-4 pt-4 pb-4 pl-4 pr-4 text-center bg-secondary bg-gradient rounded">
+          List of Remainders
+        </h3>
+        <p className="pro fs-4">
+          Total of Remainder: {filteredRemainders.length}
+        </p>
 
         <div>
           {filteredRemainders.map((re, idx) => (
-            <div className="d-flex justify-content-around w-50" key={idx}>
-              <div className="mt-4 d-flex flex-column justify-content-start">
-                <p>
+            <div className="d-flex justify-content-between w-75" key={idx}>
+              <div className="col-8 mt-4 d-flex flex-column justify-content-start">
+                <p className="pro fs-5">
                   <strong>Description: </strong>
                   {re.text}
                 </p>
-                <p>
+                <p className="pro fs-5">
                   <strong>Date: </strong>
                   {re.date}
                 </p>
-                <p>
+                <p className="pro fs-5">
                   <strong>Time: </strong>
                   {re.time}
                 </p>
-                <p>
+                <p className="pro fs-5">
                   <strong>City: </strong>
-                  {re.city}
+                  {re.city.toLowerCase()}
                 </p>
-                <p>
+                <p className="pro fs-5">
                   <strong>Weather: </strong>
                   {re.weather}
                 </p>
               </div>
-              <div>
+              <div className="col-3 d-flex justify-content-center align-items-start">
                 <button
                   type="button"
+                  className="btn btn-md btn-primary"
                   onClick={() =>
                     handleEditForm(re.id, re.text, re.date, re.time, re.city)
                   }

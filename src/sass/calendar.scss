@@ -37,7 +37,7 @@ table {
 }
 
 thead {
-  background-color: aquamarine;
+  background-color: rgb(185, 255, 232);
   text-align: center;
 }
 
@@ -59,6 +59,12 @@ td {
   max-width: 80%;
 }
 
+.middle-line {
+  width: 80px;
+  border: 1px solid black;
+  margin: 2rem auto;
+}
+
 .header {
   background-color: lightgray;
   padding: 2rem 3rem;
@@ -75,5 +81,5 @@ td {
   padding: 2rem 2rem;
   text-decoration: none;
   font-size: 1.25rem;
-  color: rgb(88, 88, 233);
+  color: rgb(255, 255, 255);
 }

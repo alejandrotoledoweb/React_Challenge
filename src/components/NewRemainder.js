@@ -41,15 +41,16 @@ const NewRemainder = ({ fetchWeatherData, error, status, loading }) => {
 
   return (
     <>
-      <div className="header justify-content-start align-items-center rounded">
-        <Link to="/" className="home-btn fw-bolder">
+      <div className="header justify-content-start align-items-center bg-primary bg-gradient rounded">
+        <Link to="/" className="home-btn fw-bolder roboto">
           Back to home page
         </Link>
-        <Link to="/calendar" className="home-btn fw-bolder">
+        <Link to="/calendar" className="home-btn fw-bolder roboto">
           Back to calendar
         </Link>
       </div>
       <div className="container">
+        <div className="middle-line"></div>
         <Formik
           className="form container"
           initialValues={initialValues}
@@ -156,6 +157,7 @@ const NewRemainder = ({ fetchWeatherData, error, status, loading }) => {
             );
           }}
         </Formik>
+        <div className="middle-line"></div>
       </div>
     </>
   );
