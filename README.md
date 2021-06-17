@@ -11,7 +11,7 @@ This project is part of the process for a job application in Jobsity.
 The features of the project are the following:
 
 - One month calendar (July) where you can see the remainders that you create.
-- The remiander created by the user can have the attributes of: description, date, time, city and weather. The last attribute weather, is taken from [OpenWeaterAPI](https://openweathermap.org/api) based on the city of the remainder.
+- The remiander created by the user can have the attributes of: description, date, time, city and weather. The last attribute weather, is taken from [OpenWeaterAPI](https://openweathermap.org/api) based on the city of the remainder. The dates for the remainders have to be between the month of July.
 - The user can filter the remainders for date click on each date inside the calendar or to see all remainders avaliable clicking on `view all remainders` above the calendar.
 - Also, the user can update any attribute from the listed remainders and also the weather will update based on the new city if updated.
 
