@@ -11,8 +11,8 @@ This project is part of the process for a job application in Jobsity.
 The features of the project are the following:
 
 - One month calendar (July) where you can see the remainders that you create.
-- The remiander created by the user can have the attributes of: description, date, time, city and weather. The last attribute weather, is taken from [OpenWeaterAPI](https://openweathermap.org/api) based on the city of the remainder. The dates for the remainders have to be between the month of July.
-- The user can filter the remainders for date click on each date inside the calendar or to see all remainders avaliable clicking on `view all remainders` above the calendar.
+- The remainder created by the user can have the attributes of description, date, time, city and weather. The last attribute weather is taken from [OpenWeaterAPI](https://openweathermap.org/api) based on the city of the remainder. The dates for the remainders have to be between July.
+- The user can filter the remainders for date click on each date inside the calendar or see all remainders available by clicking on `view all remainders` above the calendar.
 - Also, the user can update any attribute from the listed remainders and also the weather will update based on the new city if updated.
 
 ## Calendar View with some remainderSchema
@@ -34,14 +34,14 @@ The features of the project are the following:
 
 ### Main dependencies used
 
-- Redux : to manage the entire state of the app
-- Redux-thunk : to apply middleware for the app
-- Axios : to make request to the weather API
-- Formik : to created the forms
-- Yup : to validates the inputs in forms
-- react-boostrap : to create the modals
-- boostrap : to help for the styling of the app
-- create-unique-id : to create a random unique id for each remainder
+- Redux: to manage the entire state of the app
+- Redux-thunk: to apply middleware for the app
+- Axios: to make requests to the weather API
+- Formik: to create the forms
+- Yup: to validates the inputs in forms
+- react-boostrap: to create the modals
+- boostrap: to help with the styling of the app
+- create-unique-id: to create a random unique id for each remainder
 
 ## Getting Started
 
@@ -52,6 +52,8 @@ To get a local copy up and follow these simple example steps.
 - Local Machine installed [Nodejs](https://nodejs.org/en/download/)
 - Yarn as a package manager
 - A code editor as [Visual Studio](https://code.visualstudio.com/download), Sublime,etc.
+- Create an account in [OpenWeaterAPI](https://openweathermap.org/api) where you will obtain an API KEY.
+  With this API KEY, please create a `.env` file in the projects with this code inside `REACT_APP_WEATHER_API_KEY=` and after this paste the key obtained before.
 
 ### Setup
 
