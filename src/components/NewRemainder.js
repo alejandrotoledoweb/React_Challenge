@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import { fetchWeather } from "../actions/remainderActions";
 import { Link } from "react-router-dom";
 import createUID from "create-unique-id";
+import Footer from "./Footer";
 
 const NewRemainder = ({ fetchWeatherData, error, status, loading }) => {
   const initialValues = {
@@ -157,7 +158,7 @@ const NewRemainder = ({ fetchWeatherData, error, status, loading }) => {
             );
           }}
         </Formik>
-        <div className="middle-line"></div>
+        <Footer />
       </div>
     </>
   );

@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import { UpdateRemainderInfo, setFilter } from "../actions/remainderActions";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import Footer from "../components/Footer";
 
 const Calendar = ({
   remainders,
@@ -139,10 +140,13 @@ const Calendar = ({
               {week1.map((day, idx) => (
                 <td className="day" key={idx}>
                   {day}
-                  <p className="fw-bold fs-5">{countRemainders(day)}</p>
-                  <p className="fw-bold fs-6">
-                    {countRemainders(day) > 0 ? "Remainders" : ""}
+                  <p className="fw-bold fs-5 d-block pt-2">
+                    {countRemainders(day)}{" "}
+                    <span className="fw-bold fs-6">
+                      {countRemainders(day) > 0 ? "Remainder/s" : ""}
+                    </span>
                   </p>
+
                   <button
                     className="btn btn-sm btn-light"
                     value={day}
@@ -158,9 +162,11 @@ const Calendar = ({
               {week2.map((day, idx) => (
                 <td className="day" key={idx}>
                   {day}
-                  <p className="fw-bold fs-5">{countRemainders(day)}</p>
-                  <p className="fw-bold fs-6">
-                    {countRemainders(day) > 0 ? "Remainders" : ""}
+                  <p className="fw-bold fs-5 d-block pt-2">
+                    {countRemainders(day)}{" "}
+                    <span className="fw-bold fs-6">
+                      {countRemainders(day) > 0 ? "Remainder/s" : ""}
+                    </span>
                   </p>
                   <button
                     className="btn btn-sm btn-light"
@@ -177,9 +183,11 @@ const Calendar = ({
               {week3.map((day, idx) => (
                 <td className="day" key={idx}>
                   {day}
-                  <p className="fw-bold fs-5">{countRemainders(day)}</p>
-                  <p className="fw-bold fs-6">
-                    {countRemainders(day) > 0 ? "Remainders" : ""}
+                  <p className="fw-bold fs-5 d-block pt-2">
+                    {countRemainders(day)}{" "}
+                    <span className="fw-bold fs-6">
+                      {countRemainders(day) > 0 ? "Remainder/s" : ""}
+                    </span>
                   </p>
                   <button
                     className="btn btn-sm btn-light"
@@ -196,9 +204,11 @@ const Calendar = ({
               {week4.map((day, idx) => (
                 <td className="day" key={idx}>
                   {day}
-                  <p className="fw-bold fs-5">{countRemainders(day)}</p>
-                  <p className="fw-bold fs-6">
-                    {countRemainders(day) > 0 ? "Remainders" : ""}
+                  <p className="fw-bold fs-5 d-block pt-2">
+                    {countRemainders(day)}{" "}
+                    <span className="fw-bold fs-6">
+                      {countRemainders(day) > 0 ? "Remainder/s" : ""}
+                    </span>
                   </p>
                   <button
                     className="btn btn-sm btn-light"
@@ -215,9 +225,11 @@ const Calendar = ({
               {week5.map((day, idx) => (
                 <td className="day" key={idx}>
                   {day}
-                  <p className="fw-bold fs-5">{countRemainders(day)}</p>
-                  <p className="fw-bold fs-5">
-                    {countRemainders(day) > 0 ? "Remainders" : ""}
+                  <p className="fw-bold fs-5 d-block pt-2">
+                    {countRemainders(day)}{" "}
+                    <span className="fw-bold fs-6">
+                      {countRemainders(day) > 0 ? "Remainder/s" : ""}
+                    </span>
                   </p>
                   <button
                     className="btn btn-sm btn-light"
@@ -303,8 +315,10 @@ const Calendar = ({
                   <div className="mt-5 pl-3 border-top pt-3 d-inline">
                     <h3 className="my-4">Update remainder</h3>
                     <Form>
-                      <div className="form-group">
-                        <label htmlFor="text">Text for the remainder</label>
+                      <div className="form-group pro">
+                        <label htmlFor="text" className="pro">
+                          Text for the remainder
+                        </label>
                         <Field
                           type="string"
                           name="text"
@@ -411,6 +425,7 @@ const Calendar = ({
           </Modal.Footer>
         </Modal>
       </section>
+      <Footer />
     </div>
   );
 };
