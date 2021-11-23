@@ -1,12 +1,77 @@
-# Getting Started with Create React App
+<div align="center">
+    <img src="https://raw.githubusercontent.com/Jobsity/ReactChallenge/main/src/assets/jobsity_logo_small.png"/>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Challenge
+
+## Frontend using React and Redux task for JOBISTY
+
+This project is part of the process for a job application in Jobsity.
+
+The features of the project are the following:
+
+- One month calendar (July) where you can see the remainders that you create.
+- The remainder created by the user can have the attributes of description, date, time, city and weather. The last attribute weather is taken from [OpenWeaterAPI](https://openweathermap.org/api) based on the city of the remainder. The dates for the remainders have to be between July.
+- The user can filter the remainders for date click on each date inside the calendar or see all remainders available by clicking on `view all remainders` above the calendar.
+- Also, the user can update any attribute from the listed remainders and also the weather will update based on the new city if updated.
+
+## Calendar View with some remainderSchema
+
+![](src/assets/calendar-screenshot.jpg)
+
+## View of the page to create a new remainderSchema
+
+![](src/assets/create-remainder-screen-shot.jpg)
+
+## Update form displayed as a Modal form to updated any remainder.
+
+![](src/assets/edit-remainder.png.jpg)
+
+## Built With
+
+- JavaScript
+- React&Redux
+
+### Main dependencies used
+
+- Redux: to manage the entire state of the app
+- Redux-thunk: to apply middleware for the app
+- Axios: to make requests to the weather API
+- Formik: to create the forms
+- Yup: to validates the inputs in forms
+- react-boostrap: to create the modals
+- boostrap: to help with the styling of the app
+- create-unique-id: to create a random unique id for each remainder
+
+## Getting Started
+
+To get a local copy up and follow these simple example steps.
+
+### Prerequisites
+
+- Local Machine installed [Nodejs](https://nodejs.org/en/download/)
+- Yarn as a package manager
+- A code editor as [Visual Studio](https://code.visualstudio.com/download), Sublime,etc.
+- Create an account in [OpenWeaterAPI](https://openweathermap.org/api) where you will obtain an API KEY.
+  With this API KEY, please create a `.env` file in the projects with this code inside `REACT_APP_WEATHER_API_KEY=` and after this paste the key obtained before.
+
+### Setup
+
+- Please make a local copy of this repo by typing this command on your terminal.
+
+`git clone https://github.com/alejandrotoledoweb/React_Challenge.git`
+
+- Then, go to the folder created with:
+
+`cd React_Challenge`
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
+
+Before running this command be sure to run `npm i` to install all dependencies.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +79,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
+### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,42 +89,29 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Authors
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+👤 **Alejandro Toledo**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- GitHub: [@alejandrotoledoweb](https://github.com/alejandrotoledoweb)
+- Twitter: [@alejot](https://twitter.com/alejot)
+- LinkedIn: [Alejandro Toledo](https://www.linkedin.com/in/alejandro-toledo-freire/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🤝 Contributing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Contributions, issues, and feature requests are welcome!
 
-## Learn More
+Feel free to check the [issues page](https://github.com/alejandrotoledoweb/React_Challenge/issues).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Show your support
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Give a ⭐️ if you like this project!
 
-### Code Splitting
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Thank you to Jobsity, who challenged me to build this app.
 
-### Analyzing the Bundle Size
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](lic.url) licensed.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
